@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fbfdfc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --card-border: #f1f5f9;
+  --card-hover-border: #FF9137;
+  --muted: #64748b;
+  --muted-foreground: #475569;
+  --accent: #FF9137;
+  --accent-light: #fff7ed;
+  --accent-foreground: #ffffff;
+  --border: #e2e8f0;
+  --ring: #FF9137;
+  --glow-color: rgba(255, 145, 55, 0.25);
+  --mint: #70FFD2;
+  --lemon: #FFFC8C;
+  --amber: #FFCC4D;
+  --tangerine: #FF9137;
+}
+
+.dark {
+  --background: #0b0f19;
+  --foreground: #f8fafc;
+  --card: #131b2e;
+  --card-foreground: #f8fafc;
+  --card-border: #1e293b;
+  --card-hover-border: #FF9137;
+  --muted: #94a3b8;
+  --muted-foreground: #cbd5e1;
+  --accent: #FF9137;
+  --accent-light: rgba(255, 145, 55, 0.15);
+  --accent-foreground: #ffffff;
+  --border: #1e293b;
+  --ring: #FF9137;
+  --glow-color: rgba(255, 145, 55, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Technical Monospace Elements */
+code, pre, .font-mono {
+  font-family: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Bright Glassmorphism & Card Utilities */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 204, 77, 0.3);
+}
+
+.dark .glass-nav {
+  background: rgba(11, 15, 25, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 145, 55, 0.2);
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 20px -2px rgba(255, 145, 55, 0.05), 0 2px 8px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              box-shadow 0.25s ease;
+}
+
+.dark .glass-card {
+  background: rgba(19, 27, 46, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 145, 55, 0.5);
+  box-shadow: 0 16px 36px -4px rgba(255, 145, 55, 0.12), 0 0 20px 0 rgba(112, 255, 210, 0.15);
+}
+
+.dark .glass-card:hover {
+  border-color: rgba(255, 145, 55, 0.6);
+  box-shadow: 0 16px 40px -4px rgba(0, 0, 0, 0.6), 0 0 24px 0 rgba(255, 145, 55, 0.2);
+}
+
+/* Abstract Bright Engineering Grid Background */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 145, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 145, 55, 0.06) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 145, 55, 0.18) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 204, 77, 0.15) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+/* Radiant Fresh Gradient Text using the 4 Colors */
+.text-gradient {
+  background: linear-gradient(135deg, #ea580c 0%, #FF9137 35%, #d97706 70%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(135deg, #FFFC8C 0%, #FFCC4D 35%, #FF9137 70%, #70FFD2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #FF9137 0%, #FFCC4D 60%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mint {
+  background: linear-gradient(135deg, #0d9488 0%, #059669 40%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fed7aa;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9137;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* Focus States for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles for Resume */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

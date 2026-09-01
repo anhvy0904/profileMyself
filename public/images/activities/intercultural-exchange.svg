@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="actBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="16" fill="url(#actBg)" />
+
+  <!-- Abstract Global Map Dots -->
+  <g fill="rgba(255,255,255,0.1)">
+    <circle cx="150" cy="180" r="4" /><circle cx="180" cy="190" r="4" /><circle cx="210" cy="180" r="4" />
+    <circle cx="280" cy="140" r="4" /><circle cx="320" cy="160" r="4" /><circle cx="360" cy="140" r="4" />
+    <circle cx="480" cy="220" r="4" /><circle cx="520" cy="200" r="4" /><circle cx="550" cy="240" r="4" />
+    <circle cx="590" cy="250" r="4" /><circle cx="630" cy="230" r="4" />
+  </g>
+
+  <!-- Flight / Exchange Arc Path from Da Nang to Bangkok -->
+  <path d="M 460 210 Q 400 130 350 220" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-dasharray="6 4" />
+  
+  <!-- Location Pin 1 (Da Nang) -->
+  <circle cx="460" cy="210" r="8" fill="#38bdf8" />
+  <circle cx="460" cy="210" r="16" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.5" />
+  <text x="460" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#93c5fd">Da Nang, VN</text>
+
+  <!-- Location Pin 2 (Bangkok) -->
+  <circle cx="350" cy="220" r="10" fill="#f59e0b" />
+  <circle cx="350" cy="220" r="20" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.6" />
+  <text x="350" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#fde68a">Bangkok, TH</text>
+
+  <!-- Banner Card -->
+  <rect x="180" y="50" width="440" height="90" rx="14" fill="#0f172a" stroke="rgba(245,158,11,0.4)" stroke-width="1.5" />
+  <text x="400" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="18" fill="#f8fafc">
+    Innovation &amp; Intercultural Exchange Camp
+  </text>
+  <text x="400" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">
+    Bangkok, Thailand · 2025 International Program
+  </text>
+</svg>

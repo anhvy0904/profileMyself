@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)" />
+
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="300" y1="0" x2="300" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="500" y1="0" x2="500" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+    <line x1="700" y1="0" x2="700" y2="500" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+  </g>
+
+  <!-- App Window Mockup -->
+  <rect x="120" y="70" width="560" height="360" rx="16" fill="#182234" stroke="rgba(99,102,241,0.3)" stroke-width="2" />
+  
+  <!-- Window Header -->
+  <rect x="120" y="70" width="560" height="42" rx="16" fill="#0f172a" />
+  <circle cx="150" cy="91" r="6" fill="#ef4444" />
+  <circle cx="170" cy="91" r="6" fill="#f59e0b" />
+  <circle cx="190" cy="91" r="6" fill="#10b981" />
+  <text x="400" y="96" text-anchor="middle" font-family="monospace" font-size="13" fill="#94a3b8">
+    zengaku.app / learning-suite
+  </text>
+
+  <!-- Sidebar -->
+  <rect x="140" y="130" width="120" height="270" rx="8" fill="#121b2a" />
+  <rect x="155" y="150" width="90" height="14" rx="4" fill="#6366f1" opacity="0.8" />
+  <rect x="155" y="180" width="70" height="10" rx="3" fill="#334155" />
+  <rect x="155" y="205" width="80" height="10" rx="3" fill="#334155" />
+  <rect x="155" y="230" width="60" height="10" rx="3" fill="#334155" />
+
+  <!-- Main Content Dashboard -->
+  <rect x="280" y="130" width="375" height="120" rx="10" fill="#1e293b" />
+  <text x="305" y="165" font-family="system-ui, sans-serif" font-weight="700" font-size="20" fill="#f8fafc">
+    Zengaku
+  </text>
+  <text x="305" y="190" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">
+    Learning-Support Web Application · Best Web Design (4th Place)
+  </text>
+
+  <!-- Metrics / Modules Cards -->
+  <rect x="280" y="270" width="115" height="130" rx="8" fill="#121b2a" stroke="#334155" />
+  <text x="337" y="315" text-anchor="middle" font-family="monospace" font-size="22" font-weight="700" fill="#818cf8">HTML</text>
+  <text x="337" y="345" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Frontend</text>
+
+  <rect x="410" y="270" width="115" height="130" rx="8" fill="#121b2a" stroke="#334155" />
+  <text x="467" y="315" text-anchor="middle" font-family="monospace" font-size="22" font-weight="700" fill="#38bdf8">JS</text>
+  <text x="467" y="345" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Interactive</text>
+
+  <rect x="540" y="270" width="115" height="130" rx="8" fill="#121b2a" stroke="#334155" />
+  <text x="597" y="315" text-anchor="middle" font-family="monospace" font-size="22" font-weight="700" fill="#34d399">SQL</text>
+  <text x="597" y="345" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Database</text>
+</svg>

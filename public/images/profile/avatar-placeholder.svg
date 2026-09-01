@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9137" />
+      <stop offset="50%" stop-color="#FFCC4D" />
+      <stop offset="100%" stop-color="#70FFD2" />
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#fff7ed" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bgGrad)" />
+  <circle cx="100" cy="80" r="36" fill="url(#avatarGrad)" />
+  <path d="M40 170 C40 130 70 120 100 120 C130 120 160 130 160 170 Z" fill="url(#avatarGrad)" opacity="0.95" />
+  <text x="100" y="88" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#FF9137" text-anchor="middle">AV</text>
+</svg>
