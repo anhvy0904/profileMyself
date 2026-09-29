@@ -3,7 +3,7 @@
 > **Computer Science Student @ Vietnam-Korea University of Information and Communication Technology (VKU)**  
 > Passionate about Software Engineering, Applied AI, Mobile Systems, and Human-Centered UI/UX.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.1.7-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.26-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![JLPT](https://img.shields.io/badge/Japanese-JLPT_N4-orange?style=flat-square)](https://www.jlpt.jp/)
@@ -46,7 +46,7 @@ This website is built with a bright, vibrant, and modern design language, showca
 
 ### 1. Install Dependencies
 ```bash
-npm install
+npm ci
 ```
 
 ### 2. Run Development Server
@@ -55,10 +55,33 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
 
-### 3. Production Build / Static Export
+### 3. Production Build
 ```bash
 npm run build
+npm start
 ```
+
+The production build is written to `.next`. This project does not enable
+`output: 'export'`, so it does not produce an `out` directory.
+
+### 4. Deploy to Vercel
+
+Import `anhvy0904/profileMyself` and use the repository root (`.`) as the Root
+Directory. `vercel.json` selects the Next.js framework, installs dependencies
+with `npm ci`, builds with `npm run build`, and uses `.next` as the output.
+Pushes to the connected production branch (`main`) trigger a new deployment.
+
+Keep Next.js updated to a patched release: Vercel blocks deployments of
+vulnerable versions, including the original Next.js 15.1.7 used by this project.
+Commit both `package.json` and `package-lock.json` when updating dependencies.
+The scoped PostCSS override keeps Next.js 15's CSS dependency on the patched
+PostCSS 8 release used by the app; re-evaluate it when upgrading Next.js.
+
+`wrangler.json` is a separate Cloudflare configuration and is not used by
+Vercel. Its `out` asset directory requires a separately configured static
+export; do not use Wrangler or `out` as the Vercel build/output settings.
+The scripts in `scripts/` are legacy local dependency-repair utilities and
+are not needed for a normal npm installation or Vercel deployment.
 
 ---
 
